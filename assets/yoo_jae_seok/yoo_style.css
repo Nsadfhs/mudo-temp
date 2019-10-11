@@ -1,3 +1,10 @@
+html {
+    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Jua', sans-serif;
+    font-family: 'Kirang Haerang', cursive;
+    font-family: 'Yeon Sung', cursive;
+}
+
 .w3-animate-top {
     position: relative;
     animation: animatetop 0.4s

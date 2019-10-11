@@ -1,3 +1,6 @@
+@import url('http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Kirang+Haerang|Yeon+Sung&display=swap');
+
 /* 초기화 코드 / 리셋코드 / 일반화 코드 / 중화 코드 / 브라우저 호환 코드 */
 
 ::-webkit-scrollbar {
@@ -6,6 +9,11 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
+    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Jua', sans-serif;
+    font-family: 'Kirang Haerang', cursive;
+    font-family: 'Yeon Sung', cursive;
 }
 
 
@@ -464,23 +472,805 @@ template {
 *           -> checkbox
 *           -> switch
 *       -> image
+*       이미지 첨부는 url로 처리
 *           -> shape
 *           -> slide
 *           -> badge
-*       -> animation
+*       -> animation?
 *           ->tooltip
 *           ->opacity
 *           ->hover
-*           ->transparent
-*           ->transition
-*
-*   
-*
-*
-*
+*           ->transparent?
+*           ->transition?
+*           ->keyframe
 *
 *   footer
 *   ->list
 *   ->fat
 *   ->slim
+*
+*   color
+*   ->text
+*   ->hover
+*   ->background
+*   ->border
+*   ->card
+*   ->filter?
+*
+*
+****차후, 모든 항목에 반응형 심화 레이아웃 적용
+*
+*ex) <link rel="stylesheet" media="screen and (max-width: 768px)" href="mystyle.css" />
+*css 적용시에도 미디어쿼리를 이용하여 디바이스별 css를 달리 할 수 있음
 */
+
+
+/* 레이아웃 / 패딩(패널, 카드) / 그리드 / 반응형 기본 */
+
+.etch-full-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+}
+
+.etch-container {
+    max-width: 1400px;
+    width: 90%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+}
+
+
+/* 모바일 responsive */
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
+
+.etch-container,
+.etch-panel {
+    padding: 0.01em 16px
+}
+
+.etch-panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+.etch-wrapper {
+    width: 90%;
+}
+
+.etch-content {
+    max-width: 1200px;
+}
+
+.etch-row,
+.etch-row>.etch-col {
+    padding: 0px;
+}
+
+.etch-row-padding,
+.etch-row-padding>.etch-col {
+    padding: 0 8px
+}
+
+.etch-col {
+    float: left;
+    width: 100%
+}
+
+.etch-col.s1 {
+    width: 8.33333%
+}
+
+.etch-col.s2 {
+    width: 16.66666%
+}
+
+.etch-col.s3 {
+    width: 24.99999%
+}
+
+.etch-col.s4 {
+    width: 33.33333%
+}
+
+.etch-col.s5 {
+    width: 41.66666%
+}
+
+.etch-col.s6 {
+    width: 49.99999%
+}
+
+.etch-col.s7 {
+    width: 58.33333%
+}
+
+.etch-col.s8 {
+    width: 66.66666%
+}
+
+.etch-col.s9 {
+    width: 74.99999%
+}
+
+.etch-col.s10 {
+    width: 83.33333%
+}
+
+.etch-col.s11 {
+    width: 91.66666%
+}
+
+.etch-col.s12 {
+    width: 99.99999%
+}
+
+.etch-container:after,
+.etch-container:before,
+.etch-panel:after,
+.etch-panel:before,
+.etch-row:after,
+.etch-row:before,
+.etch-row-padding:after,
+.etch-row-padding:before {
+    content: "";
+    display: table;
+    clear: both
+}
+
+
+/* 디바이스별 반응형 기본 
+**2019 web responsive size
+
+375 x 667 (mobile)
+1366 x 768 (laptop)
+1920 x 1080 (large desktop)
+
+**device별 font size
+
+22em - 90%
+58em - 100%
+85em - 105%
+115em - 110%
+
+*
+*
+*데스크탑에서 사용될 스타일을 먼저 작성합니다.
+*min-width: 지정 사이즈 이상 시에 괄호 내부 내용 적용 / max-width: 지정 사이즈 미만 시에 괄호 내부 내용 적용
+*   @media screen and (max-width: 1367px) {
+     랩탑에 사용될 스트일 시트를 여기에 작성합니다.
+}
+* 
+* @media screen and (max-width: 501px) {
+     모바일에 사용될 스트일 시트를 여기에 작성합니다.
+}
+*
+*/
+
+
+/* 모바일 */
+
+@media screen and (max-width:600px) {
+    .etch-container {
+        max-width: 540px;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:767px) {
+    .etch-container {
+        max-width: 575px;
+    }
+}
+
+
+/* 노트 */
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .etch-container {
+        max-width: 750px;
+    }
+}
+
+
+/* 태블릿 */
+
+@media screen and (min-width:992px) and (max-width:1365px) {
+    .etch-container {
+        max-width: 980px;
+    }
+}
+
+
+/* 태블릿2 */
+
+@media (min-width:1366px) and (max-width:1499px) {
+    .etch-container {
+        max-width: 1200px;
+    }
+}
+
+
+/* 모바일 */
+
+@media (min-width:601px) {
+    .etch-col.m1 {
+        width: 8.33333%
+    }
+    .etch-col.m2 {
+        width: 16.66666%
+    }
+    .etch-col.m3 {
+        width: 24.99999%
+    }
+    .etch-col.m4 {
+        width: 33.33333%
+    }
+    .etch-col.m5 {
+        width: 41.66666%
+    }
+    .etch-col.m6 {
+        width: 49.99999%
+    }
+    .etch-col.m7 {
+        width: 58.33333%
+    }
+    .etch-col.m8 {
+        width: 66.66666%
+    }
+    .etch-col.m9 {
+        width: 74.99999%
+    }
+    .etch-col.m10 {
+        width: 83.33333%
+    }
+    .etch-col.m11 {
+        width: 91.66666%
+    }
+    .etch-col.m12 {
+        width: 99.99999%
+    }
+}
+
+
+/* 태블릿 */
+
+@media (min-width:993px) {
+    .etch-col.l1 {
+        width: 8.33333%
+    }
+    .etch-col.l2 {
+        width: 16.66666%
+    }
+    .etch-col.l3 {
+        width: 24.99999%
+    }
+    .etch-col.l4 {
+        width: 33.33333%
+    }
+    .etch-col.l5 {
+        width: 41.66666%
+    }
+    .etch-col.l6 {
+        width: 49.99999%
+    }
+    .etch-col.l7 {
+        width: 58.33333%
+    }
+    .etch-col.l8 {
+        width: 66.66666%
+    }
+    .etch-col.l9 {
+        width: 74.99999%
+    }
+    .etch-col.l10 {
+        width: 83.33333%
+    }
+    .etch-col.l11 {
+        width: 91.66666%
+    }
+    .etch-col.l12 {
+        width: 99.99999%
+    }
+}
+
+@media (min-width:1400px) {
+    .etch-col.xl1 {
+        width: 8.33333%
+    }
+    .etch-col.xl2 {
+        width: 16.66666%
+    }
+    .etch-col.xl3 {
+        width: 24.99999%
+    }
+    .etch-col.xl4 {
+        width: 33.33333%
+    }
+    .etch-col.xl5 {
+        width: 41.66666%
+    }
+    .etch-col.xl6 {
+        width: 49.99999%
+    }
+    .etch-col.xl7 {
+        width: 58.33333%
+    }
+    .etch-col.xl8 {
+        width: 66.66666%
+    }
+    .etch-col.xl9 {
+        width: 74.99999%
+    }
+    .etch-col.xl10 {
+        width: 83.33333%
+    }
+    .etch-col.xl11 {
+        width: 91.66666%
+    }
+    .etch-col.xl12 {
+        width: 99.99999%
+    }
+}
+
+
+/* 정렬 / 분할 / 기타 */
+
+.text-center {
+    text-align: center;
+}
+
+.etch-center {
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.etch-wall-right {
+    border-right: 1px solid rgba(0, 0, 0, 0.5)
+}
+
+.etch-wall-left {
+    border-left: 1px solid rgba(0, 0, 0, 0.5)
+}
+
+.etch-separate-dot {
+    content: "";
+    border: 1px dotted rgba(0, 0, 0, 0.5)
+}
+
+.etch-mr-auto {
+    margin-right: auto;
+}
+
+.etch-ml-auto {
+    margin-left: auto;
+}
+
+.etch-pt-10 {
+    padding-top: 10px;
+}
+
+.etch-pt-20 {
+    padding-top: 20px;
+}
+
+.etch-pb-10 {
+    padding-bottom: 10px;
+}
+
+.etch-pb-20 {
+    padding-bottom: 20px
+}
+
+
+/* 타이포 그래피 */
+
+
+/* 이미지 */
+
+
+/* 콤포넌트 폼 / 버튼 / 타일 / 커텐 / 인풋 / 필드셋 */
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    -webkit-appearance: button
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+.etch-btn,
+.etch-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.etch-btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.etch-btn,
+.etch-button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.etch-disabled,
+.etch-btn:disabled,
+.etch-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+.etch-disabled *,
+:disabled * {
+    pointer-events: none
+}
+
+.etch-btn.etch-disabled:hover,
+.etch-btn:disabled:hover {
+    box-shadow: none
+}
+
+.etch-button:hover {
+    color: #000!important;
+    background-color: #c7c7c7!important
+}
+
+
+/* 네비게이션 바 */
+
+.nav {}
+
+.navbar {}
+
+.navbar-brand {}
+
+.navbar-content {}
+
+
+/* 헤더 */
+
+.header {}
+
+.header-nav {}
+
+.header-hero {}
+
+.header-intro {}
+
+
+/* 푸터 */
+
+.footer {}
+
+.footer-nav {}
+
+.footer-list {}
+
+.footer-brand {}
+
+.footer-wall {}
+
+
+/* 컬러 */
+
+
+/* Colors 
+*
+*
+*
+*c7051e(red) - rgb(199, 5, 30)
+*1ec705(green) - rgb(05, 199, 30)
+*051ec7(blue) - rgb(30, 05, 199)
+*c7c7c7(gray) - rgb(199, 199, 199)
+*ececec(light gray) - rgb(236, 236, 236)
+*050505(black) - rgb(05, 05, 05)
+*950530(jazzberry zam) - rgb(149, 5, 48)
+*00ffff(cyan) - rgb(0, 255, 255)
+*ffff00(amber) - rgb(255, 255, 0)
+*ff00ff(pink) - rgb(255, 0, 255)
+*
+*
+*/
+
+
+/* basic color */
+
+.etch-jazzberryZam,
+.etch-hover-jazzberryZam:hover {
+    color: #fff!important;
+    background-color: #950530!important
+}
+
+.etch-red,
+.etch-hover-red:hover {
+    color: #fff!important;
+    background-color: #c7051e!important
+}
+
+.etch-green,
+.etch-hover-green:hover {
+    color: #fff!important;
+    background-color: #1ec705!important
+}
+
+.etch-blue,
+.etch-hover-blue:hover {
+    color: #fff!important;
+    background-color: #051ec7!important
+}
+
+.etch-cyan,
+.etch-hover-cyan:hover {
+    color: #000!important;
+    background-color: #00ffff!important
+}
+
+.etch-pink,
+.etch-hover-pink:hover {
+    color: #fff!important;
+    background-color: #ff00ff!important
+}
+
+.etch-amber,
+.etch-hover-amber:hover {
+    color: #000!important;
+    background-color: #ffff00!important
+}
+
+.etch-blue-grey,
+.etch-hover-blue-grey:hover,
+.etch-blue-gray,
+.etch-hover-blue-gray:hover {
+    color: #fff!important;
+    background-color: #c7c7c7!important
+}
+
+.etch-white,
+.etch-hover-white:hover {
+    color: #000!important;
+    background-color: #fff!important
+}
+
+.etch-black,
+.etch-hover-black:hover {
+    color: #fff!important;
+    background-color: #050505!important
+}
+
+.etch-grey,
+.etch-hover-grey:hover,
+.etch-gray,
+.etch-hover-gray:hover {
+    color: #000!important;
+    background-color: #c7c7c7!important
+}
+
+.etch-light-grey,
+.etch-hover-light-grey:hover,
+.etch-light-gray,
+.etch-hover-light-gray:hover {
+    color: #000!important;
+    background-color: #ececec!important
+}
+
+
+/* text color */
+
+.etch-text-jazzberryZam,
+.etch-hover-text-jazzberryZam:hover {
+    color: #950530!important
+}
+
+.etch-text-red,
+.etch-hover-text-red:hover {
+    color: #c7051e!important
+}
+
+.etch-text-green,
+.etch-hover-text-green:hover {
+    color: #1ec705!important
+}
+
+.etch-text-blue,
+.etch-hover-text-blue:hover {
+    color: #051ec7!important
+}
+
+.etch-text-cyan,
+.etch-hover-text-cyan:hover {
+    color: #00ffff!important
+}
+
+.etch-text-pink,
+.etch-hover-text-pink:hover {
+    color: #ff00ff!important
+}
+
+.etch-text-amber,
+.etch-hover-text-amber:hover {
+    color: #ffff00!important
+}
+
+.etch-text-white,
+.etch-hover-text-white:hover {
+    color: #fff!important
+}
+
+.etch-text-black,
+.etch-hover-text-black:hover {
+    color: #050505!important
+}
+
+.etch-text-grey,
+.etch-hover-text-grey:hover,
+.etch-text-gray,
+.etch-hover-text-gray:hover {
+    color: #c7c7c7!important
+}
+
+.etch-text-light-grey,
+.etch-hover-text-light-grey:hover,
+.etch-text-light-gray,
+.etch-hover-text-light-gray:hover {
+    color: #ececec!important
+}
+
+
+/* border color */
+
+.etch-border-jazzberryZam,
+.etch-hover-border-jazzberryZam:hover {
+    border-color: #950530!important
+}
+
+.etch-border-red,
+.etch-hover-border-red:hover {
+    border-color: #c7051e!important
+}
+
+.etch-border-green,
+.etch-hover-border-green:hover {
+    border-color: #1ec705!important
+}
+
+.etch-border-blue,
+.etch-hover-border-blue:hover {
+    border-color: #051ec7!important
+}
+
+.etch-border-cyan,
+.etch-hover-border-cyan:hover {
+    border-color: #00ffff!important
+}
+
+.etch-border-pink,
+.etch-hover-border-pink:hover {
+    border-color: #ff00ff!important
+}
+
+.etch-border-amber,
+.etch-hover-border-amber:hover {
+    border-color: #ffff00!important
+}
+
+.etch-border-white,
+.etch-hover-border-white:hover {
+    border-color: #fff!important
+}
+
+.etch-border-black,
+.etch-hover-border-black:hover {
+    border-color: #050505!important
+}
+
+.etch-border-grey,
+.etch-hover-border-grey:hover,
+.etch-border-gray,
+.etch-hover-border-gray:hover {
+    border-color: #c7c7c7!important
+}
+
+.etch-border-light-grey,
+.etch-hover-border-light-grey:hover,
+.etch-border-light-gray,
+.etch-hover-border-light-gray:hover {
+    border-color: #ececec!important
+}

@@ -1,0 +1,1649 @@
+/* W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
+
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block
+}
+
+progress {
+    vertical-align: baseline
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+[hidden],
+template {
+    display: none
+}
+
+a {
+    background-color: transparent
+}
+
+a:active,
+a:hover {
+    outline-width: 0
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+dfn {
+    font-style: italic
+}
+
+mark {
+    background: #ffff00;
+    color: #050505;
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -0.25em
+}
+
+sup {
+    top: -0.5em
+}
+
+figure {
+    margin: 1em 40px
+}
+
+img {
+    border-style: none
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+button,
+input,
+select,
+textarea,
+optgroup {
+    font: inherit;
+    margin: 0
+}
+
+optgroup {
+    font-weight: bold
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    -webkit-appearance: button
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    border: 1px solid #c7c7c7;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+
+legend {
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+
+/* End extract */
+
+html,
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5
+}
+
+html {
+    overflow-x: hidden
+}
+
+h1 {
+    font-size: 36px
+}
+
+h2 {
+    font-size: 30px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+.etch-serif {
+    font-family: serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0
+}
+
+.etch-wide {
+    letter-spacing: 4px
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ececec;
+    margin: 20px 0
+}
+
+.etch-image {
+    max-width: 100%;
+    height: auto
+}
+
+img {
+    vertical-align: middle
+}
+
+a {
+    color: inherit
+}
+
+.etch-table,
+.etch-table-all {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table
+}
+
+.etch-table-all {
+    border: 1px solid #c7c7c7
+}
+
+.etch-bordered tr,
+.etch-table-all tr {
+    border-bottom: 1px solid #c7c7c7
+}
+
+.etch-striped tbody tr:nth-child(even) {
+    background-color: #ececec
+}
+
+.etch-table-all tr:nth-child(odd) {
+    background-color: #ececec
+}
+
+.etch-table-all tr:nth-child(even) {
+    background-color: #ececec
+}
+
+.etch-hoverable tbody tr:hover,
+.etch-ul.etch-hoverable li:hover {
+    background-color: #c7c7c7
+}
+
+.etch-centered tr th,
+.etch-centered tr td {
+    text-align: center
+}
+
+.etch-table td,
+.etch-table th,
+.etch-table-all td,
+.etch-table-all th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top
+}
+
+.etch-table th:first-child,
+.etch-table td:first-child,
+.etch-table-all th:first-child,
+.etch-table-all td:first-child {
+    padding-left: 16px
+}
+
+.etch-btn,
+.etch-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.etch-btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.etch-btn,
+.etch-button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.etch-disabled,
+.etch-btn:disabled,
+.etch-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+.etch-disabled *,
+:disabled * {
+    pointer-events: none
+}
+
+.etch-btn.etch-disabled:hover,
+.etch-btn:disabled:hover {
+    box-shadow: none
+}
+
+.etch-badge,
+.etch-tag {
+    background-color: #050505;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center
+}
+
+.etch-badge {
+    border-radius: 50%
+}
+
+.etch-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+.etch-ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ececec
+}
+
+.etch-ul li:last-child {
+    border-bottom: none
+}
+
+.etch-tooltip,
+.etch-display-container {
+    position: relative
+}
+
+.etch-tooltip .etch-text {
+    display: none
+}
+
+.etch-tooltip:hover .etch-text {
+    display: inline-block
+}
+
+.etch-ripple:active {
+    opacity: 0.5
+}
+
+.etch-ripple {
+    transition: opacity 0s
+}
+
+.etch-input {
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #c7c7c7;
+    width: 100%
+}
+
+.etch-select {
+    padding: 9px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #c7c7c7
+}
+
+.etch-dropdown-click,
+.etch-dropdown-hover {
+    position: relative;
+    display: inline-block;
+    cursor: pointer
+}
+
+.etch-dropdown-hover:hover .etch-dropdown-content {
+    display: block
+}
+
+.etch-dropdown-hover:first-child,
+.etch-dropdown-click:hover {
+    background-color: #c7c7c7;
+    color: #050505
+}
+
+.etch-dropdown-hover:hover>.etch-button:first-child,
+.etch-dropdown-click:hover>.etch-button:first-child {
+    background-color: #c7c7c7;
+    color: #050505
+}
+
+.etch-dropdown-content {
+    cursor: auto;
+    color: #050505;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    margin: 0;
+    padding: 0;
+    z-index: 1
+}
+
+.etch-check,
+.etch-radio {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 6px
+}
+
+.etch-sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: fixed!important;
+    z-index: 1;
+    overflow: auto
+}
+
+.etch-bar-block .etch-dropdown-hover,
+.etch-bar-block .etch-dropdown-click {
+    width: 100%
+}
+
+.etch-bar-block .etch-dropdown-hover .etch-dropdown-content,
+.etch-bar-block .etch-dropdown-click .etch-dropdown-content {
+    min-width: 100%
+}
+
+.etch-bar-block .etch-dropdown-hover .etch-button,
+.etch-bar-block .etch-dropdown-click .etch-button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 16px
+}
+
+.etch-main,
+#main {
+    transition: margin-left .4s
+}
+
+.etch-modal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.etch-modal-content {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 600px
+}
+
+.etch-bar {
+    width: 100%;
+    overflow: hidden
+}
+
+.etch-center .etch-bar {
+    display: inline-block;
+    width: auto
+}
+
+.etch-bar .etch-bar-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0
+}
+
+.etch-bar .etch-dropdown-hover,
+.etch-bar .etch-dropdown-click {
+    position: static;
+    float: left
+}
+
+.etch-bar .etch-button {
+    white-space: normal
+}
+
+.etch-bar-block .etch-bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0
+}
+
+.etch-bar-block.etch-center .etch-bar-item {
+    text-align: center
+}
+
+.etch-block {
+    display: block;
+    width: 100%
+}
+
+.etch-responsive {
+    display: block;
+    overflow-x: auto
+}
+
+.etch-container:after,
+.etch-container:before,
+.etch-panel:after,
+.etch-panel:before,
+.etch-row:after,
+.etch-row:before,
+.etch-row-padding:after,
+.etch-row-padding:before,
+.etch-cell-row:before,
+.etch-cell-row:after,
+.etch-clear:after,
+.etch-clear:before,
+.etch-bar:before,
+.etch-bar:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.etch-col,
+.etch-half,
+.etch-third,
+.etch-twothird,
+.etch-threequarter,
+.etch-quarter {
+    float: left;
+    width: 100%
+}
+
+.etch-col.s1 {
+    width: 8.33333%
+}
+
+.etch-col.s2 {
+    width: 16.66666%
+}
+
+.etch-col.s3 {
+    width: 24.99999%
+}
+
+.etch-col.s4 {
+    width: 33.33333%
+}
+
+.etch-col.s5 {
+    width: 41.66666%
+}
+
+.etch-col.s6 {
+    width: 49.99999%
+}
+
+.etch-col.s7 {
+    width: 58.33333%
+}
+
+.etch-col.s8 {
+    width: 66.66666%
+}
+
+.etch-col.s9 {
+    width: 74.99999%
+}
+
+.etch-col.s10 {
+    width: 83.33333%
+}
+
+.etch-col.s11 {
+    width: 91.66666%
+}
+
+.etch-col.s12 {
+    width: 99.99999%
+}
+
+@media (min-width:601px) {
+    .etch-col.m1 {
+        width: 8.33333%
+    }
+    .etch-col.m2 {
+        width: 16.66666%
+    }
+    .etch-col.m3,
+    .etch-quarter {
+        width: 24.99999%
+    }
+    .etch-col.m4,
+    .etch-third {
+        width: 33.33333%
+    }
+    .etch-col.m5 {
+        width: 41.66666%
+    }
+    .etch-col.m6,
+    .etch-half {
+        width: 49.99999%
+    }
+    .etch-col.m7 {
+        width: 58.33333%
+    }
+    .etch-col.m8,
+    .etch-twothird {
+        width: 66.66666%
+    }
+    .etch-col.m9,
+    .etch-threequarter {
+        width: 74.99999%
+    }
+    .etch-col.m10 {
+        width: 83.33333%
+    }
+    .etch-col.m11 {
+        width: 91.66666%
+    }
+    .etch-col.m12 {
+        width: 99.99999%
+    }
+}
+
+@media (min-width:993px) {
+    .etch-col.l1 {
+        width: 8.33333%
+    }
+    .etch-col.l2 {
+        width: 16.66666%
+    }
+    .etch-col.l3 {
+        width: 24.99999%
+    }
+    .etch-col.l4 {
+        width: 33.33333%
+    }
+    .etch-col.l5 {
+        width: 41.66666%
+    }
+    .etch-col.l6 {
+        width: 49.99999%
+    }
+    .etch-col.l7 {
+        width: 58.33333%
+    }
+    .etch-col.l8 {
+        width: 66.66666%
+    }
+    .etch-col.l9 {
+        width: 74.99999%
+    }
+    .etch-col.l10 {
+        width: 83.33333%
+    }
+    .etch-col.l11 {
+        width: 91.66666%
+    }
+    .etch-col.l12 {
+        width: 99.99999%
+    }
+}
+
+.etch-rest {
+    overflow: hidden
+}
+
+.etch-stretch {
+    margin-left: -16px;
+    margin-right: -16px
+}
+
+.etch-content,
+.etch-auto {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.etch-content {
+    max-width: 980px
+}
+
+.etch-auto {
+    max-width: 1140px
+}
+
+.etch-cell-row {
+    display: table;
+    width: 100%
+}
+
+.etch-cell {
+    display: table-cell
+}
+
+.etch-cell-top {
+    vertical-align: top
+}
+
+.etch-cell-middle {
+    vertical-align: middle
+}
+
+.etch-cell-bottom {
+    vertical-align: bottom
+}
+
+.etch-hide {
+    display: none!important
+}
+
+.etch-show-block,
+.etch-show {
+    display: block!important
+}
+
+.etch-show-inline-block {
+    display: inline-block!important
+}
+
+@media (max-width:1205px) {
+    .etch-auto {
+        max-width: 95%
+    }
+}
+
+@media (max-width:600px) {
+    .etch-modal-content {
+        margin: 0 10px;
+        width: auto!important
+    }
+    .etch-modal {
+        padding-top: 30px
+    }
+    .etch-dropdown-hover.etch-mobile .etch-dropdown-content,
+    .etch-dropdown-click.etch-mobile .etch-dropdown-content {
+        position: relative
+    }
+    .etch-hide-small {
+        display: none!important
+    }
+    .etch-mobile {
+        display: block;
+        width: 100%!important
+    }
+    .etch-bar-item.etch-mobile,
+    .etch-dropdown-hover.etch-mobile,
+    .etch-dropdown-click.etch-mobile {
+        text-align: center
+    }
+    .etch-dropdown-hover.etch-mobile,
+    .etch-dropdown-hover.etch-mobile .etch-btn,
+    .etch-dropdown-hover.etch-mobile .etch-button,
+    .etch-dropdown-click.etch-mobile,
+    .etch-dropdown-click.etch-mobile .etch-btn,
+    .etch-dropdown-click.etch-mobile .etch-button {
+        width: 100%
+    }
+}
+
+@media (max-width:768px) {
+    .etch-modal-content {
+        width: 500px
+    }
+    .etch-modal {
+        padding-top: 50px
+    }
+}
+
+@media (min-width:993px) {
+    .etch-modal-content {
+        width: 900px
+    }
+    .etch-hide-large {
+        display: none!important
+    }
+    .etch-sidebar.etch-collapse {
+        display: block!important
+    }
+}
+
+@media (max-width:992px) and (min-width:601px) {
+    .etch-hide-medium {
+        display: none!important
+    }
+}
+
+@media (max-width:992px) {
+    .etch-sidebar.etch-collapse {
+        display: none
+    }
+    .etch-main {
+        margin-left: 0!important;
+        margin-right: 0!important
+    }
+    .etch-auto {
+        max-width: 100%
+    }
+}
+
+.etch-top,
+.etch-bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 1
+}
+
+.etch-top {
+    top: 0
+}
+
+.etch-bottom {
+    bottom: 0
+}
+
+.etch-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2
+}
+
+.etch-display-topleft {
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.etch-display-topright {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.etch-display-bottomleft {
+    position: absolute;
+    left: 0;
+    bottom: 0
+}
+
+.etch-display-bottomright {
+    position: absolute;
+    right: 0;
+    bottom: 0
+}
+
+.etch-display-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.etch-display-left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(-0%, -50%)
+}
+
+.etch-display-right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%)
+}
+
+.etch-display-topmiddle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%)
+}
+
+.etch-display-bottommiddle {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%)
+}
+
+.etch-display-container:hover .etch-display-hover {
+    display: block
+}
+
+.etch-display-container:hover span.etch-display-hover {
+    display: inline-block
+}
+
+.etch-display-hover {
+    display: none
+}
+
+.etch-display-position {
+    position: absolute
+}
+
+.etch-circle {
+    border-radius: 50%
+}
+
+.etch-round-small {
+    border-radius: 2px
+}
+
+.etch-round,
+.etch-round-medium {
+    border-radius: 4px
+}
+
+.etch-round-large {
+    border-radius: 8px
+}
+
+.etch-round-xlarge {
+    border-radius: 16px
+}
+
+.etch-round-xxlarge {
+    border-radius: 32px
+}
+
+.etch-row-padding,
+.etch-row-padding>.etch-half,
+.etch-row-padding>.etch-third,
+.etch-row-padding>.etch-twothird,
+.etch-row-padding>.etch-threequarter,
+.etch-row-padding>.etch-quarter,
+.etch-row-padding>.etch-col {
+    padding: 0 8px
+}
+
+.etch-container,
+.etch-panel {
+    padding: 0.01em 16px
+}
+
+.etch-panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+.etch-code,
+.etch-codespan {
+    font-family: Consolas, "courier new";
+    font-size: 16px
+}
+
+.etch-code {
+    width: auto;
+    background-color: #fff;
+    padding: 8px 12px;
+    border-left: 4px solid #1ec705;
+    word-wrap: break-word
+}
+
+.etch-codespan {
+    color: #c7051e;
+    background-color: #ececec;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 110%
+}
+
+.etch-card,
+.etch-card-2 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+
+.etch-card-4,
+.etch-hover-shadow:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.etch-spin {
+    animation: etch-spin 2s infinite linear
+}
+
+@keyframes etch-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(359deg)
+    }
+}
+
+.etch-animate-fading {
+    animation: fading 10s infinite
+}
+
+@keyframes fading {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.etch-animate-opacity {
+    animation: opac 0.8s
+}
+
+@keyframes opac {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.etch-animate-top {
+    position: relative;
+    animation: animatetop 0.4s
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.etch-animate-left {
+    position: relative;
+    animation: animateleft 0.4s
+}
+
+@keyframes animateleft {
+    from {
+        left: -300px;
+        opacity: 0
+    }
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+.etch-animate-right {
+    position: relative;
+    animation: animateright 0.4s
+}
+
+@keyframes animateright {
+    from {
+        right: -300px;
+        opacity: 0
+    }
+    to {
+        right: 0;
+        opacity: 1
+    }
+}
+
+.etch-animate-bottom {
+    position: relative;
+    animation: animatebottom 0.4s
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+.etch-animate-zoom {
+    animation: animatezoom 0.6s
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.etch-animate-input {
+    transition: width 0.4s ease-in-out
+}
+
+.etch-animate-input:focus {
+    width: 100%!important
+}
+
+.etch-opacity,
+.etch-hover-opacity:hover {
+    opacity: 0.60
+}
+
+.etch-opacity-off,
+.etch-hover-opacity-off:hover {
+    opacity: 1
+}
+
+.etch-opacity-max {
+    opacity: 0.25
+}
+
+.etch-opacity-min {
+    opacity: 0.75
+}
+
+.etch-greyscale-max,
+.etch-grayscale-max,
+.etch-hover-greyscale:hover,
+.etch-hover-grayscale:hover {
+    filter: grayscale(100%)
+}
+
+.etch-greyscale,
+.etch-grayscale {
+    filter: grayscale(75%)
+}
+
+.etch-greyscale-min,
+.etch-grayscale-min {
+    filter: grayscale(50%)
+}
+
+.etch-sepia {
+    filter: sepia(75%)
+}
+
+.etch-sepia-max,
+.etch-hover-sepia:hover {
+    filter: sepia(100%)
+}
+
+.etch-sepia-min {
+    filter: sepia(50%)
+}
+
+.etch-tiny {
+    font-size: 10px!important
+}
+
+.etch-small {
+    font-size: 12px!important
+}
+
+.etch-medium {
+    font-size: 15px!important
+}
+
+.etch-large {
+    font-size: 18px!important
+}
+
+.etch-xlarge {
+    font-size: 24px!important
+}
+
+.etch-xxlarge {
+    font-size: 36px!important
+}
+
+.etch-xxxlarge {
+    font-size: 48px!important
+}
+
+.etch-jumbo {
+    font-size: 64px!important
+}
+
+.etch-left-align {
+    text-align: left!important
+}
+
+.etch-right-align {
+    text-align: right!important
+}
+
+.etch-justify {
+    text-align: justify!important
+}
+
+.etch-center {
+    text-align: center!important
+}
+
+.etch-border-0 {
+    border: 0!important
+}
+
+.etch-border {
+    border: 1px solid #c7c7c7!important
+}
+
+.etch-border-top {
+    border-top: 1px solid #c7c7c7!important
+}
+
+.etch-border-bottom {
+    border-bottom: 1px solid #c7c7c7!important
+}
+
+.etch-border-left {
+    border-left: 1px solid #c7c7c7!important
+}
+
+.etch-border-right {
+    border-right: 1px solid #c7c7c7!important
+}
+
+.etch-topbar {
+    border-top: 6px solid #c7c7c7!important
+}
+
+.etch-bottombar {
+    border-bottom: 6px solid #c7c7c7!important
+}
+
+.etch-leftbar {
+    border-left: 6px solid #c7c7c7!important
+}
+
+.etch-rightbar {
+    border-right: 6px solid #c7c7c7!important
+}
+
+.etch-section,
+.etch-code {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important
+}
+
+.etch-margin {
+    margin: 16px!important
+}
+
+.etch-margin-top {
+    margin-top: 16px!important
+}
+
+.etch-margin-bottom {
+    margin-bottom: 16px!important
+}
+
+.etch-margin-left {
+    margin-left: 16px!important
+}
+
+.etch-margin-right {
+    margin-right: 16px!important
+}
+
+.etch-padding-small {
+    padding: 4px 8px!important
+}
+
+.etch-padding {
+    padding: 8px 16px!important
+}
+
+.etch-padding-large {
+    padding: 12px 24px!important
+}
+
+.etch-padding-16 {
+    padding-top: 16px!important;
+    padding-bottom: 16px!important
+}
+
+.etch-padding-24 {
+    padding-top: 24px!important;
+    padding-bottom: 24px!important
+}
+
+.etch-padding-32 {
+    padding-top: 32px!important;
+    padding-bottom: 32px!important
+}
+
+.etch-padding-48 {
+    padding-top: 48px!important;
+    padding-bottom: 48px!important
+}
+
+.etch-padding-64 {
+    padding-top: 64px!important;
+    padding-bottom: 64px!important
+}
+
+.etch-left {
+    float: left!important
+}
+
+.etch-right {
+    float: right!important
+}
+
+.etch-button:hover {
+    color: #050505!important;
+    background-color: #c7c7c7!important
+}
+
+.etch-transparent,
+.etch-hover-none:hover {
+    background-color: transparent!important
+}
+
+.etch-hover-none:hover {
+    box-shadow: none!important
+}
+
+
+/* Colors */
+
+.etch-jazzberryZam,
+.etch-hover-jazzberryZam:hover {
+    color: #fff!important;
+    background-color: #950530!important
+}
+
+.etch-red,
+.etch-hover-red:hover {
+    color: #fff!important;
+    background-color: #c7051e!important
+}
+
+.etch-green,
+.etch-hover-green:hover {
+    color: #fff!important;
+    background-color: #1ec705!important
+}
+
+.etch-blue,
+.etch-hover-blue:hover {
+    color: #fff!important;
+    background-color: #051ec7!important
+}
+
+.etch-cyan,
+.etch-hover-cyan:hover {
+    color: #000!important;
+    background-color: #00ffff!important
+}
+
+.etch-pink,
+.etch-hover-pink:hover {
+    color: #fff!important;
+    background-color: #ff00ff!important
+}
+
+.etch-amber,
+.etch-hover-amber:hover {
+    color: #000!important;
+    background-color: #ffff00!important
+}
+
+.etch-blue-grey,
+.etch-hover-blue-grey:hover,
+.etch-blue-gray,
+.etch-hover-blue-gray:hover {
+    color: #fff!important;
+    background-color: #c7c7c7!important
+}
+
+.etch-white,
+.etch-hover-white:hover {
+    color: #000!important;
+    background-color: #fff!important
+}
+
+.etch-black,
+.etch-hover-black:hover {
+    color: #fff!important;
+    background-color: #050505!important
+}
+
+.etch-grey,
+.etch-hover-grey:hover,
+.etch-gray,
+.etch-hover-gray:hover {
+    color: #000!important;
+    background-color: #c7c7c7!important
+}
+
+.etch-light-grey,
+.etch-hover-light-grey:hover,
+.etch-light-gray,
+.etch-hover-light-gray:hover {
+    color: #000!important;
+    background-color: #ececec!important
+}
+
+
+/* text color */
+
+.etch-text-jazzberryZam,
+.etch-hover-text-jazzberryZam:hover {
+    color: #950530!important
+}
+
+.etch-text-red,
+.etch-hover-text-red:hover {
+    color: #c7051e!important
+}
+
+.etch-text-green,
+.etch-hover-text-green:hover {
+    color: #1ec705!important
+}
+
+.etch-text-blue,
+.etch-hover-text-blue:hover {
+    color: #051ec7!important
+}
+
+.etch-text-cyan,
+.etch-hover-text-cyan:hover {
+    color: #00ffff!important
+}
+
+.etch-text-pink,
+.etch-hover-text-pink:hover {
+    color: #ff00ff!important
+}
+
+.etch-text-amber,
+.etch-hover-text-amber:hover {
+    color: #ffff00!important
+}
+
+.etch-text-white,
+.etch-hover-text-white:hover {
+    color: #fff!important
+}
+
+.etch-text-black,
+.etch-hover-text-black:hover {
+    color: #050505!important
+}
+
+.etch-text-grey,
+.etch-hover-text-grey:hover,
+.etch-text-gray,
+.etch-hover-text-gray:hover {
+    color: #c7c7c7!important
+}
+
+.etch-text-light-grey,
+.etch-hover-text-light-grey:hover,
+.etch-text-light-gray,
+.etch-hover-text-light-gray:hover {
+    color: #ececec!important
+}
+
+
+/* border color */
+
+.etch-border-jazzberryZam,
+.etch-hover-border-jazzberryZam:hover {
+    border-color: #950530!important
+}
+
+.etch-border-red,
+.etch-hover-border-red:hover {
+    border-color: #c7051e!important
+}
+
+.etch-border-green,
+.etch-hover-border-green:hover {
+    border-color: #1ec705!important
+}
+
+.etch-border-blue,
+.etch-hover-border-blue:hover {
+    border-color: #051ec7!important
+}
+
+.etch-border-cyan,
+.etch-hover-border-cyan:hover {
+    border-color: #00ffff!important
+}
+
+.etch-border-pink,
+.etch-hover-border-pink:hover {
+    border-color: #ff00ff!important
+}
+
+.etch-border-amber,
+.etch-hover-border-amber:hover {
+    border-color: #ffff00!important
+}
+
+.etch-border-white,
+.etch-hover-border-white:hover {
+    border-color: #fff!important
+}
+
+.etch-border-black,
+.etch-hover-border-black:hover {
+    border-color: #050505!important
+}
+
+.etch-border-grey,
+.etch-hover-border-grey:hover,
+.etch-border-gray,
+.etch-hover-border-gray:hover {
+    border-color: #c7c7c7!important
+}
+
+.etch-border-light-grey,
+.etch-hover-border-light-grey:hover,
+.etch-border-light-gray,
+.etch-hover-border-light-gray:hover {
+    border-color: #ececec!important
+}
